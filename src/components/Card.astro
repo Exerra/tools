@@ -12,7 +12,7 @@ interface Props {
 const { href, title, description, icon } = Astro.props;
 ---
 
-<a href={href} class="flex w-full shrink-0 grow flex-col rounded-xl border-2 border-slate-200 p-5 lg:basis1/3 xl:basis-1/4 hover:bg-slate-100 transition ease-in-out">
+<a href={href} class="flex w-full shrink-0 grow flex-col rounded-xl border-2 border-slate-200 p-5 lg:basis1/3 xl:basis-1/4 hover:bg-slate-100 transition ease-in-out" data-astro-prefetch>
 	<div class="flex flex-row gap-3 mb-3">
 		<FontawesomeIcon icon={icon} class="flex h-5 w-5 my-auto" />
 		<h3 class=" text-2xl font-bold leading-tight tracking-tighter">{title}</h3>
