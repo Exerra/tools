@@ -12,7 +12,18 @@ const calculateTime = (speed: number, speedMeasurement: string, size: number, si
 	}
 
 	const calculateSpeed = (speed: number, speedMeasurement: string): number => {
-		if (speedMeasurement == "gbps") return speed * 1000
+		//if (speedMeasurement == "gbps") return speed * 1000
+
+		console.log(speedMeasurement)
+
+		switch (speedMeasurement) {
+			case "MB/s":
+				return speed * 8
+			case "gbps":
+				return speed * 1000
+			case "GB/s":
+				return speed * 8 * 1000
+		}
 
 		return speed
 	}
@@ -69,7 +80,9 @@ const DTC = () => {
 								}}
 							>
 								<option value={"mbps"}>Mbps</option>
+								<option value={"MB/s"}>MB/s</option>
 								<option value={"gbps"}>Gbps</option>
+								<option value={"GB/s"}>GB/s</option>
 							</select>
 						</div>
 					</div>
