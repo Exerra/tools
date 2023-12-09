@@ -1,0 +1,21 @@
+---
+
+import DTC from "./DTC";
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+---
+
+<Layout
+		title="Download Time Calculator | Exerra Tools"
+		description="Calculate the download time for a file size with a given network speed"
+>
+	<section class="grid items-center gap-6 pt-6 pb-8 px-6 md:py-10">
+		<Header
+				title={"Download Time Calculator"}
+				description={"Calculate the download time for a file size with a given network speed"}
+		/>
+
+		<DTC client:load />
+	</section>
+
+</Layout>

@@ -1,0 +1,13 @@
+---
+type Props = {
+	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props
+---
+
+<div class="flex max-w-[980px] flex-col items-start gap-5">
+	<h1 class="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">{title}</h1>
+	<p class="max-w-[700px] text-lg text-slate-700 sm:text-xl">{description}</p>
+</div>

@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FontawesomeIcon from "../components/FontawesomeIcon.astro";
+import { faPercent, faGauge, faCalculator } from "@fortawesome/free-solid-svg-icons";
+import Category from "../components/Category.astro";
+import Card from "../components/Card.astro";
+import Header from "../components/Header.astro"
+---
+
+<Layout title="Exerra Tools">
+	<section class="grid items-center gap-6 pt-6 pb-8 px-6 md:py-10">
+		<Header
+			title={"Exerra Tools"}
+			description={"Access a variety of hand-crafted tehnical and demographic tools."}
+		/>
+
+		<Category title="Technical">
+			<Card
+					title={"Aspect Ratio Calculator"}
+					description={"Calculate the the missing width/height for an aspect ratio"}
+					href={"/tool/technical/aspect-ratio-calculator"}
+					icon={faPercent}
+			/>
+			<Card
+					title={"Download Time Calculator"}
+					description={"Calculate the download time for a file size with a given network speed"}
+					href={"/tool/technical/download-time-calculator"}
+					icon={faGauge}
+			/>
+		</Category>
+
+		<Category title="Demographic">
+			<Card
+				title={"Death/Birth coefficient calculator"}
+				description={"Calculate the death & birth coefficient based on death/birth rates and the population"}
+				href={"/tool/demographic/deathbirth-coefficient-calculator"}
+				icon={faCalculator}
+			/>
+		</Category>
+
+	</section>
+</Layout>
