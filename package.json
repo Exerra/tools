@@ -21,6 +21,7 @@
     "@types/react-dom": "^18.0.6",
     "astro": "^4.0.3",
     "astro-og-image": "^1.0.7",
+    "astro-seo": "^0.8.0",
     "humanize-duration": "^3.31.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",

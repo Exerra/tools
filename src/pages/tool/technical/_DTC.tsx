@@ -38,7 +38,7 @@ const DTC = () => {
 	const [ calculatedSpeed, setCalculatedSpeed ] = useState<string>("Not calculated yet")
 
 	const calc = () => {
-		console.log(size, sizeMeasurement, speed, speedMeasurement, (size! * 8))
+		// console.log(size, sizeMeasurement, speed, speedMeasurement, (size! * 8))
 		if (!size || !sizeMeasurement || !speed || !speedMeasurement) return
 
 		setCalculatedSpeed(calculateTime(speed, speedMeasurement, size, sizeMeasurement))

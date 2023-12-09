@@ -1,5 +1,6 @@
 ---
 import Navbar from "../components/Navbar.astro"
+import { SEO } from "astro-seo"
 interface Props {
 	title: string;
 	description: string;
@@ -17,6 +18,34 @@ const { title, description } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+
+		<SEO
+				title={title}
+				description={description}
+				twitter={{
+					creator: "@Exerra",
+					card: "summary_large_image"
+				}}
+				openGraph={{
+					basic: {
+						title: title,
+						image: "/og.png",
+						type: ""
+					},
+					optional: {
+						description: description,
+					},
+					image: {
+						alt: "Exerra Tools"
+					}
+				}}
+				extend={{
+					link: [{ rel: "icon", href: "https://cdn.exerra.xyz/png/pfp.png" }],
+					meta: [
+						{ name: "theme-color", content: "#F2EDE3" }
+					]
+				}}
+		/>
 	</head>
 	<body class="min-h-screen bg-white font-sans text-slate-900 antialiased">
 		<Navbar />
