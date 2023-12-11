@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import humanizeDuration from "humanize-duration";
 import getInputValue from "../../../util/getinputvalue.ts";
 
+export const title = "Download Time Calculator"
+export const description = "Calculate the amount of time it will take to transfer a file size with a given network speed"
+
 const calculateTime = (speed: number, speedMeasurement: string, size: number, sizeMeasurement: string): string => {
 	const finalize = (seconds: number): string => {
 		return humanizeDuration(seconds * 1000, {

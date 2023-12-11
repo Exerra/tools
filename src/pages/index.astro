@@ -5,6 +5,12 @@ import { faPercent, faGauge, faCalculator } from "@fortawesome/free-solid-svg-ic
 import Category from "../components/Category.astro";
 import Card from "../components/Card.astro";
 import Header from "../components/Header.astro"
+
+import { title as DTCTitle, description as DTCDescription } from "./tool/technical/_DTC.tsx"
+import { title as ARCTitle, description as ARCDescription } from "./tool/technical/_ARC.tsx"
+
+import { title as DBCCTitle, description as DBCCDescription } from "./tool/demographic/_DBCC.tsx"
+
 ---
 
 <Layout title="Exerra Tools" description="Access a variety of hand-crafted technical and demographic tools">
@@ -16,13 +22,13 @@ import Header from "../components/Header.astro"
 
 		<Category title="Technical">
 			<Card
-				title={"Aspect Ratio Calculator"}
-				description={"Calculate the the missing width/height for an aspect ratio"}
+				title={ARCTitle}
+				description={ARCDescription}
 				href={"/tool/technical/aspect-ratio-calculator"}
 				icon={faPercent}
 			/>
 			<Card
-				title={"Download Time Calculator"}
+				title={DTCTitle}
 				description={"Calculate the download time for a file size with a given network speed"}
 				href={"/tool/technical/download-time-calculator"}
 				icon={faGauge}
@@ -31,8 +37,8 @@ import Header from "../components/Header.astro"
 
 		<Category title="Demographic">
 			<Card
-				title={"Death/Birth coefficient calculator"}
-				description={"Calculate the death & birth coefficient based on death/birth rates and the population"}
+				title={DBCCTitle}}
+				description={DBCCDescription}
 				href={"/tool/demographic/deathbirth-coefficient-calculator"}
 				icon={faCalculator}
 			/>

@@ -2,6 +2,9 @@ import { useState } from "react";
 import getInputValue from "../../../util/getinputvalue.ts";
 import getAspectRatio from "../../../util/aspectratio.ts";
 
+export const title = "Aspect Ratio Calculator"
+export const description = "Calculates the missing width/height value when resizing one value in a given aspect ratio"
+
 const ARC = () => {
 	const [ ogWidth, setOGWidth ] = useState( 1920 )
 	const [ ogHeight, setOGHeight ] = useState( 1080 )

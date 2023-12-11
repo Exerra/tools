@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import getInputValue from "../../../util/getinputvalue";
 
+export const title = "Death/Birth Coefficient Calculator"
+export const description = "Calculate the death/birth coefficient based on death/birth rates and the population"
+
 const calculateCoefficient = (value: number, population: number, rounding?: number) => {
 	if (!value || !population) return "Not calculated yet"
 
