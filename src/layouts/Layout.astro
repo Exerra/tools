@@ -1,6 +1,7 @@
 ---
 import Navbar from "../components/Navbar.astro"
 import { SEO } from "astro-seo"
+import { Spa } from "astro-spa"
 interface Props {
 	title: string;
 	description: string;
@@ -57,6 +58,7 @@ const { title, description } = Astro.props;
 				Made by <a href="https://exerra.xyz" class="font-bold" target="_blank" rel="noreferrer">Exerra</a> <img alt="Exerra's profile picture" height="24" width="24" class="inline-flex h-6 w-6" src="https://cdn.exerra.xyz/png/pfp.png">
 			</p>
 		</footer>
+		<Spa defaultAnimation={false} containerSelector={"main"} />
 	</body>
 </html>
 <style is:global>
