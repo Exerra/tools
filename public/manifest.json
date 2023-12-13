@@ -1,9 +1,0 @@
-{
-	"name": "Exerra Tools",
-	"short_name": "Exerra Tools",
-	"theme_color": "#ffffff",
-	"background_color": "#ffffff",
-	"display": "standalone",
-	"scope": "/",
-	"start_url": "/"
-}
