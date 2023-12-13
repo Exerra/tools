@@ -27,4 +27,4 @@ As of writing, all the tools here are basically glorified calculators with speci
 - TailwindCSS
 - humanize-duration (Download Time Calculator)
 - astro-seo
-- astro-spa
+- ~~astro-spa~~ See [#3](https://github.com/Exerra/tools/issues/3)
