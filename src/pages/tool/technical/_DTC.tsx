@@ -61,14 +61,14 @@ const DTC = () => {
 	return (
 		<>
 			<div className={"flex flex-wrap gap-3"}>
-				<div className="flex w-full shrink-0 grow flex-col rounded-xl border-2 border-slate-200 p-5 lg:basis1/3 xl:basis-1/4">
+				<div className="flex w-full shrink-0 grow flex-col rounded-xl border-2 border-slate-200 p-5 lg:basis1/3 xl:basis-1/4 dark:border-slate-800">
 					<h3 className=" text-2xl font-bold leading-tight tracking-tighter mb-5">Speed</h3>
 					<div className={"flex flex-row gap-6 justify-between"}>
 						<div className={"w-full"}>
 							<input
 								type={"number"}
 								id={"speed-input"}
-								className={"flex w-full h-10 rounded-lg border px-3 py-2 text-sm ring-offset-2 file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"}
+								className={"flex w-full h-10 rounded-lg border px-3 py-2 text-sm ring-offset-2 file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-700 bg-transparent"}
 								placeholder={"30"}
 								onChange={(c) => {
 									setSpeed(getInputValue(c))
@@ -77,7 +77,7 @@ const DTC = () => {
 						</div>
 						<div>
 							<select
-								className={"flex w-24 h-10 rounded-lg border px-3 py-2 text-sm ring-offset-2 file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"}
+								className={"flex w-24 h-10 rounded-lg border px-3 py-2 text-sm ring-offset-2 file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-700 bg-transparent"}
 								onChange={(c) => {
 									setSpeedMeasurement(getInputValue(c))
 								}}
@@ -91,14 +91,14 @@ const DTC = () => {
 					</div>
 				</div>
 
-				<div className="flex w-full shrink-0 grow flex-col rounded-xl border-2 border-slate-200 p-5 lg:basis1/3 xl:basis-1/4">
+				<div className="flex w-full shrink-0 grow flex-col rounded-xl border-2 border-slate-200 p-5 lg:basis1/3 xl:basis-1/4 dark:border-slate-800">
 					<h3 className=" text-2xl font-bold leading-tight tracking-tighter mb-5">File size</h3>
 					<div className={"flex flex-row gap-6 justify-between"}>
 						<div className={"w-full"}>
 							<input
 								type={"number"}
 								id={"size-input"}
-								className={"flex w-full h-10 rounded-lg border px-3 py-2 text-sm ring-offset-2 file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"}
+								className={"flex w-full h-10 rounded-lg border px-3 py-2 text-sm ring-offset-2 file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-700 bg-transparent"}
 								placeholder={"128"}
 								onChange={(c) => {
 									setSize(getInputValue(c))
@@ -107,7 +107,7 @@ const DTC = () => {
 						</div>
 						<div>
 							<select
-								className={"flex w-24 h-10 rounded-lg border px-3 py-2 text-sm ring-offset-2 file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"}
+								className={"flex w-24 h-10 rounded-lg border px-3 py-2 text-sm ring-offset-2 file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-700 bg-transparent"}
 								onChange={(c) => {
 									setSizeMeasurement(getInputValue(c))
 								}}

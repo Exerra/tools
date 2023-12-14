@@ -16,7 +16,7 @@ const ARC = () => {
 	return (
 		<>
 			<div className={"flex flex-wrap gap-3"}>
-				<div className="flex w-full shrink-0 grow flex-col rounded-xl border-2 border-slate-200 p-5 lg:basis1/3 xl:basis-1/4">
+				<div className="flex w-full shrink-0 grow flex-col rounded-xl border-2 border-slate-200 p-5 lg:basis1/3 xl:basis-1/4 dark:border-slate-800">
 					<h3 className=" text-2xl font-bold leading-tight tracking-tighter mb-5">Original Width/Height</h3>
 					<div className={"flex flex-col gap-3"}>
 						<div>
@@ -25,7 +25,7 @@ const ARC = () => {
 								type={"number"}
 								pattern={"[0-9]*"}
 								id={"og-w"}
-								className={"flex w-full h-10 rounded-lg border px-3 py-2 text-sm ring-offset-2 file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"}
+								className={"flex w-full h-10 rounded-lg border px-3 py-2 text-sm ring-offset-2 bg-transparent file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-700"}
 								placeholder={"1920"}
 								defaultValue={ogWidth}
 								onChange={async (c) => {
@@ -50,7 +50,7 @@ const ARC = () => {
 								type={"number"}
 								pattern={"[0-9]*"}
 								id={"og-h"}
-								className={"flex w-full h-10 rounded-lg border px-3 py-2 text-sm ring-offset-2 file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"}
+								className={"flex w-full h-10 rounded-lg border px-3 py-2 text-sm ring-offset-2 bg-transparent file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-700"}
 								placeholder={"1080"}
 								defaultValue={ogHeight}
 								onChange={async (c) => {
@@ -71,7 +71,7 @@ const ARC = () => {
 					</div>
 				</div>
 
-				<div className="flex w-full shrink-0 grow flex-col rounded-xl border-2 border-slate-200 p-5 lg:basis1/3 xl:basis-1/4">
+				<div className="flex w-full shrink-0 grow flex-col rounded-xl border-2 border-slate-200 p-5 lg:basis1/3 xl:basis-1/4 dark:border-slate-800">
 					<h3 className=" text-2xl font-bold leading-tight tracking-tighter mb-5">New Width/Height</h3>
 					<div className={"flex flex-col gap-3"}>
 						<div>
@@ -80,7 +80,7 @@ const ARC = () => {
 								type={"number"}
 								pattern={"[0-9]*"}
 								id={"new-w"}
-								className={"flex w-full h-10 rounded-lg border px-3 py-2 text-sm ring-offset-2 file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"}
+								className={"flex w-full h-10 rounded-lg border px-3 py-2 text-sm ring-offset-2 bg-transparent file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-700"}
 								onChange={async (c) => {
 									setNewWidth(parseInt(getInputValue(c)))
 									const value = Math.ceil((ogHeight / ogWidth) * parseInt(getInputValue(c)))
@@ -97,7 +97,7 @@ const ARC = () => {
 								type={"number"}
 								pattern={"[0-9]*"}
 								id={"new-h"}
-								className={"flex w-full h-10 rounded-lg border px-3 py-2 text-sm ring-offset-2 file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"}
+								className={"flex w-full h-10 rounded-lg border px-3 py-2 text-sm ring-offset-2 bg-transparent file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-700"}
 								value={newHeight}
 								onChange={async (c) => {
 									setNewHeight(parseInt(getInputValue(c)))
