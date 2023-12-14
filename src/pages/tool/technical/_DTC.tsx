@@ -17,8 +17,6 @@ const calculateTime = (speed: number, speedMeasurement: string, size: number, si
 	const calculateSpeed = (speed: number, speedMeasurement: string): number => {
 		//if (speedMeasurement == "gbps") return speed * 1000
 
-		console.log(speedMeasurement)
-
 		switch (speedMeasurement) {
 			case "MB/s":
 				return speed * 8
