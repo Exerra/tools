@@ -11,13 +11,17 @@ import { title as ARCTitle, description as ARCDescription } from "./tool/technic
 
 import { title as DBCCTitle, description as DBCCDescription } from "./tool/demographic/_DBCC.tsx"
 
+import { site } from "../config/site"
+
+const description = "Access a variety of hand-crafted technical and demographic tools"
+
 ---
 
-<Layout title="Exerra Tools" description="Access a variety of hand-crafted technical and demographic tools">
+<Layout title={site.name} description={description}>
 	<section class="container grid items-center gap-6 pt-6 pb-8 mx-auto px-6 md:py-10">
 		<Header
-			title={"Exerra Tools"}
-			description={"Access a variety of hand-crafted technical and demographic tools"}
+			title={site.name}
+			description={description}
 		/>
 
 		<Category title="Technical">
