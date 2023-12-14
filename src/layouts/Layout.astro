@@ -22,6 +22,16 @@ const { title, description } = Astro.props;
 		<meta name="theme-color" content="#0F172A" media="(prefers-color-scheme: dark)">
 		<title>{title}</title>
 
+		<script is:inline>
+			if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+				document.documentElement.classList.add('dark');
+				localStorage.theme = 'dark';
+			} else {
+				document.documentElement.classList.remove('dark');
+				localStorage.theme = 'light';
+			}
+		</script>
+
 		<SEO
 				title={title}
 				description={description}

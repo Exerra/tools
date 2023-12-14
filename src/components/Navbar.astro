@@ -1,5 +1,5 @@
 ---
-import { faToolbox } from "@fortawesome/free-solid-svg-icons";
+import { faSun, faToolbox } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faMastodon, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import FontawesomeIcon from "./FontawesomeIcon.astro";
 
@@ -37,7 +37,30 @@ import { site } from "../config/site";
 						<span class="sr-only">Mastodon</span>
 					</div>
 				</a>
+
+				<button id="theme-switch">
+					<div class="active:scale-95 inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 dark:hover:bg-slate-800 dark:hover:text-slate-100 disabled:opacity-50 dark:focus:ring-slate-400 disabled:pointer-events-none dark:focus:ring-offset-slate-900 data-[state=open]:bg-slate-100 dark:data-[state=open]:bg-slate-800 bg-transparent hover:bg-slate-100 dark:hover:bg-slate-800 dark:text-slate-100 dark:hover:text-slate-100 data-[state=open]:bg-transparent dark:data-[state=open]:bg-transparent h-9 px-2 rounded-md text-slate-700 dark:text-slate-400">
+						<FontawesomeIcon icon={faSun} class="h-5 w-5" />
+						<span class="sr-only">Theme switch</span>
+					</div>
+				</button>
 			</div>
 		</div>
 	</div>
 </nav>
+
+<script is:inline>
+	const themeSwitch = document.querySelector(
+		"#theme-switch"
+	)
+
+	themeSwitch.addEventListener("click", () => {
+		if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+			document.documentElement.classList.remove("dark")
+			localStorage.theme = "light"
+		} else {
+			document.documentElement.classList.add('dark');
+			localStorage.theme = 'dark';
+		}
+	})
+</script>
